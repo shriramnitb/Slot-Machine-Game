@@ -1,0 +1,66 @@
+body{
+    background-color: seagreen;
+}
+
+:root {
+    --speed: 0;
+}
+
+#start{
+    margin-left: 350px;
+    margin-top: 30px;
+}
+
+#stopbtn{
+    margin-left: 350px;
+    margin-top: 30px;
+}
+
+#speed{
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+#machine{
+    background-color: blanchedalmond;
+    height: 300px;
+    width: 900px;
+    border: 2px solid black;
+    display: flex;
+    margin: auto;
+
+    z-index: 5;
+
+}
+
+.slot{
+    background-color: rgb(135, 235, 140);
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    margin: 50px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.slot>.value{
+    z-index: 3;
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s / var(--speed));;
+}
+
+@keyframes slotspin{
+    0%{
+        transform: translateY(-200px);
+    }
+
+    100%{
+        transform: translateY(200px);
+    }
+}
